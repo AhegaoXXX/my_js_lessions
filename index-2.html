@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document-3</title>
+</head>
+<body>
+
+    <!-- <ol id="todo-list"></ol>
+
+
+
+
+
+
+    <script>
+
+        let tasks = ['Buy lemonade', 'Make toasts', 'Repair car', 'Play games', 'Pet a cat'];
+        const liTask = document.getElementById('todo-list');
+
+        for(let i = 0; i < tasks.length; i++){
+            const newTask = document.createElement('li');
+            newTask.innerHTML = tasks[i];
+    
+            liTask.append(newTask);
+        };
+        
+        
+        
+    
+    
+    </script> -->
+
+    
+
+
+    <!-- <script>
+   
+        let list = ['камень','ножницы','бумага'];
+        let score = {
+            usScore: 0,
+            compScore: 0,
+            draws: 0,
+        } 
+        let check = function(tab, comp){
+            alert(` Вы: ${tab} VS Бот: ${comp} \n
+            `)
+        }
+        let result = function(){
+            alert(`
+            Победы: ${score.usScore}
+            Поражения: ${score.compScore}
+            Ничьи: ${score.draws}
+            `);
+        }
+        let getGame = function(usRps, comp){
+            if(usRps === 'камень' && comp === 'камень' || usRps === 'ножницы' && comp === 'ножницы' || usRps === 'бумага' && comp === 'бумага') {
+                score.draws++;
+                alert('ничья');
+            }else if(usRps === 'камень' && comp === 'ножницы' || usRps === 'ножницы' && comp === 'бумага' || usRps === 'бумага' && comp === 'камень'){
+                score.usScore++;
+                alert('победа');
+            }else if(usRps === 'камень' && comp === 'бумага' || usRps === 'ножницы' && comp === 'камень' || usRps === 'бумага' && comp === 'ножницы'){
+                score.compScore++;
+                alert('проигрыш');
+            }
+        }
+        while(true){
+            let randomWords = () => Math.floor(Math.random() * list.length);
+            const comp = list[randomWords()];
+            let usRps = prompt('камень, ножницы, бумага?');
+            if(usRps == null){
+                result();
+                break;
+            } 
+            getGame(usRps, comp);
+            if(usRps == ''){
+                continue;
+            }
+            check(usRps, comp);
+        }
+        console.log(score);
+
+
+
+
+
+        let words = ['apple', 'book', 'europe'];
+        let Game = {
+            numberOfletter: null,
+            word: null,
+            arrayLetters: [],
+            tries: 0,
+        } 
+        let randomWords = () => Math.floor(Math.random() * words.length);
+        let createArrayLetter = word =>{
+            for(let i = 0; i < word.length; i++){
+                Game.arrayLetters.push('_ ')
+            }
+        }
+        const printMessage = hash => {
+            alert(`Количество букв в слове: ${hash.numberOfletter} \n` + `Загаданное слово ${hash.arrayLetters.join('')}`);
+        }
+        let checkLetter = symbol =>{
+            for(let i = 0; i < Game.word.length; i++){
+                if(symbol == Game.word[i]){
+                    Game.arrayLetters[i] = symbol;
+                }
+            }
+        }
+        Game.word = words[randomWords()];
+        createArrayLetter(Game.word);
+        Game.numberOfletter = Game.word.length;
+        while(true){
+            printMessage(Game);
+            let userWord = prompt('Введите букву');
+            if(userWord == null){
+                break;
+            }
+            if(userWord.length !==1){
+                alert('Введите только одно значение');
+                continue;
+            }
+            Game.tries++;
+            checkLetter(userWord);
+            checkLetter(userWord.toLocaleLowerCase());
+            if(Game.word == Game.arrayLetters.join('')){
+                alert(`Капитал шоу Поле Чудес \n Подарки в студию`);
+                break;
+            }
+        }
+
+
+
+    </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
